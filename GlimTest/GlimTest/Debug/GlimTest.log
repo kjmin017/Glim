@@ -1,0 +1,13 @@
+﻿  pch.cpp
+  CDlgImage.cpp
+C:\Users\jouwg\source\repos\GlimTest\CDlgImage.cpp(117,4): warning C4060: switch문에 'case' 또는 'default' 레이블이 없습니다.
+  (소스 파일 '/CDlgImage.cpp'을(를) 컴파일하는 중)
+  
+  GlimTest.cpp
+  GlimTestDlg.cpp
+  코드를 생성하고 있습니다...
+CDlgImage.obj : warning LNK4258: '/entry:WinMainCRTStartup' 지시문은 '/ENTRY:wWinMainCRTStartup' 스위치와 호환되지 않습니다. 무시됩니다.
+GlimTest.obj : warning LNK4258: '/entry:WinMainCRTStartup' 지시문은 '/ENTRY:wWinMainCRTStartup' 스위치와 호환되지 않습니다. 무시됩니다.
+GlimTestDlg.obj : warning LNK4258: '/entry:WinMainCRTStartup' 지시문은 '/ENTRY:wWinMainCRTStartup' 스위치와 호환되지 않습니다. 무시됩니다.
+pch.obj : warning LNK4258: '/entry:WinMainCRTStartup' 지시문은 '/ENTRY:wWinMainCRTStartup' 스위치와 호환되지 않습니다. 무시됩니다.
+  GlimTest.vcxproj -> C:\Users\jouwg\source\repos\GlimTest\Debug\GlimTest.exe

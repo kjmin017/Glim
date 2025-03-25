@@ -1,0 +1,4 @@
+*.vc.*
+*.tlog
+*.vsidx
+*.ipch

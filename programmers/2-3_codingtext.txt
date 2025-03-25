@@ -1,0 +1,60 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <iterator>
+
+using namespace std;
+
+int solution(int a, int b, int c, int d) {
+
+    int nums[4] = {a,b,c,d};
+    int answer = 0;
+    int arr[6] = {0};
+    for(int n : nums){
+        arr[n-1] +=1; 
+    }
+    int maxValue = *max_element(begin(arr), std::end(arr));
+
+    if(maxValue == 4){
+        answer = 1111 * a;
+    }
+    else if(maxValue == 3){
+        int q = 0;
+        int p = distance(begin(arr), max_element(begin(arr), std::end(arr)))+1;
+        for(int n : nums){
+            if(p != n){
+               q = n;
+            } 
+        }
+        answer = (10 * p + q) * (10 * p + q);
+    }
+    else if(maxValue == 2){
+        int cnt = count(begin(arr), end(arr), 2);
+        if(cnt==2){
+            for(int n : nums){
+                if(a != n){
+                    answer = (a + n) * abs(a - n);
+                    break;
+                } 
+            }
+        }
+        else{
+            int p = distance(begin(arr), max_element(begin(arr), std::end(arr)))+1;
+            int q = 0;
+            int r = 0;
+            for(int n : nums){
+                if(q==0 && n !=p){
+                    q = n;
+                }
+                if(q!=0 && n!=p){
+                    r = n;
+                }
+            }
+            answer = q * r;
+        }
+    }
+    else if(maxValue == 1){
+        answer = min({a, b, c, d});
+    }
+    return answer;
+}
